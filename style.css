@@ -1,68 +1,133 @@
+/* Base Variables */
+:root {
+    --background-color: #e0e0e0;
+    --primary-color: #6c63ff;
+    --shadow-light: #ffffff;
+    --shadow-dark: #bebebe;
+    --border-radius: 20px;
+    --padding: 20px;
+    --transition-speed: 0.3s;
+}
+
+/* Base Styles */
 body {
     font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #e0e0e0;
-    margin: 0;
+    min-height: 100vh;
 }
 
-.neumorphism-card {
-    background-color: #e0e0e0;
-    border-radius: 20px;
-    box-shadow: 10px 10px 20px #bebebe,
-                -10px -10px 20px #ffffff;
-    padding: 20px;
-    text-align: center;
-}
-
-.neumorphism-button {
-    background-color: #e0e0e0;
-    border: none;
-    border-radius: 12px;
-    box-shadow: 5px 5px 10px #bebebe,
-                -5px -5px 10px #ffffff;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: all 0.3s ease;
-}
-
-.neumorphism-button:active {
-    box-shadow: inset 5px 5px 10px #bebebe,
-                inset -5px -5px 10px #ffffff;
-}
-
-@media (max-width: 600px) {
-    .neumorphism-card {
-        padding: 10px;
-    }
-    
-    .neumorphism-button {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
-}
-
-:root {
-    --background-color: #e0e0e0;
-    --shadow-light: #ffffff;
-    --shadow-dark: #bebebe;
-}
-
-body {
-    background-color: var(--background-color);
-}
-
-.neumorphism-card {
+/* Header Component */
+.nm-header {
     background-color: var(--background-color);
     box-shadow: 10px 10px 20px var(--shadow-dark),
                 -10px -10px 20px var(--shadow-light);
+    padding: var(--padding);
+    text-align: center;
+    width: 100%;
 }
 
-.neumorphism-button {
+/* Footer Component */
+.nm-footer {
     background-color: var(--background-color);
+    box-shadow: 10px 10px 20px var(--shadow-dark),
+                -10px -10px 20px var(--shadow-light);
+    padding: var(--padding);
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Sidebar Component */
+.nm-sidebar {
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    box-shadow: 10px 10px 20px var(--shadow-dark),
+                -10px -10px 20px var(--shadow-light);
+    padding: var(--padding);
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+}
+
+/* Container Component */
+.nm-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--padding);
+}
+
+/* Card Component */
+.nm-card {
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    box-shadow: 10px 10px 20px var(--shadow-dark),
+                -10px -10px 20px var(--shadow-light);
+    padding: var(--padding);
+    text-align: center;
+    transition: all var(--transition-speed) ease;
+}
+
+/* Button Component */
+.nm-button {
+    background-color: var(--background-color);
+    border: none;
+    border-radius: 12px;
     box-shadow: 5px 5px 10px var(--shadow-dark),
                 -5px -5px 10px var(--shadow-light);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+}
+
+.nm-button:hover {
+    box-shadow: 8px 8px 16px var(--shadow-dark),
+                -8px -8px 16px var(--shadow-light);
+}
+
+.nm-button:active {
+    box-shadow: inset 5px 5px 10px var(--shadow-dark),
+                inset -5px -5px 10px var(--shadow-light);
+}
+
+/* Input Component */
+.nm-input {
+    background-color: var(--background-color);
+    border: none;
+    border-radius: 12px;
+    box-shadow: inset 5px 5px 10px var(--shadow-dark),
+                inset -5px -5px 10px var(--shadow-light);
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: all var(--transition-speed) ease;
+}
+
+.nm-input:focus {
+    box-shadow: 8px 8px 16px var(--shadow-dark),
+                -8px -8px 16px var(--shadow-light);
+}
+
+/* Utility Classes */
+.nm-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nm-margin {
+    margin: 10px;
+}
+
+.nm-padding {
+    padding: 10px;
 }
