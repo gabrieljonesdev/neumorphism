@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0e0e0;
+    margin: 0;
+}
+
+.neumorphism-card {
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #bebebe,
+                -10px -10px 20px #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.neumorphism-button {
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px #bebebe,
+                -5px -5px 10px #ffffff;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.neumorphism-button:active {
+    box-shadow: inset 5px 5px 10px #bebebe,
+                inset -5px -5px 10px #ffffff;
+}
+
+@media (max-width: 600px) {
+    .neumorphism-card {
+        padding: 10px;
+    }
+    
+    .neumorphism-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+:root {
+    --background-color: #e0e0e0;
+    --shadow-light: #ffffff;
+    --shadow-dark: #bebebe;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.neumorphism-card {
+    background-color: var(--background-color);
+    box-shadow: 10px 10px 20px var(--shadow-dark),
+                -10px -10px 20px var(--shadow-light);
+}
+
+.neumorphism-button {
+    background-color: var(--background-color);
+    box-shadow: 5px 5px 10px var(--shadow-dark),
+                -5px -5px 10px var(--shadow-light);
+}
